@@ -3,11 +3,11 @@
 | Purpose | Code |
 | :----- | :----- |
 | Use pandas in a code file | `import pandas as pd` |
-| Read CSV | `df = pd.read('my_data_file.csv')`  |
-| Write to CSV | `df = pd.tocsv('my_new_data_file.csv')` |
+| Read CSV | `df = pd.read_csv('my_data_file.csv')`  |
+| Write to CSV | `df = pd.to_csv('my_new_data_file.csv')` |
 | Read Excel | `df = pd.read_excel('my_data_file.xlsx', 'sheet1')`  |
 | Write to Excel | `df = pd.to_excel('my_new_data_file', sheet_name='sheet1')` |
-| Skip n rows on read | `df = pd.read('my_data_file.csv', skiprows=1)` | 
+| Skip n rows on read | `df = pd.read_csv('my_data_file.csv', skiprows=1)` | 
 | Number of rows/cols | `df.shape` |
 | Top n rows | `df.head(5)` |
 | Column labels | `df.columns` |
@@ -15,6 +15,9 @@
 | Drop a named column | `df.drop(['Source for Re-opening'], axis=1)` |
 | Drop numbered columns | `df.drop(df.columns[[40, 41]], axis=1)` |
 | Find missing values | `df.isnull()` and `df.isna()` |
+| Count missing values in each row | `df.isnull().sum()` and `df.isna().sum()`|
+| Count total missing values in the dataframe | `df.isnull().sum().sum()` and `df.isna().sum().sum()` |
+| Create a new dataframe with the rows with missing values | `df_isna = df[df.isna().any(axis=1)]` |
 | Drop null values | `df.dropna()` |
 | Replace missing values with `fillna` | `df.fillna({'Column A': 0, 'Column B': 99, 'Column C': df['Column C'].mean()})`, `df.fillna(method='ffill', axis=1)`, `df.fillna(value=5)`  |
 | Replace missing values with a particular value e.g. mean | `mean = df['col1'].mean()` then `df['col1'].fillna(mean)` |
@@ -27,9 +30,4 @@
 | Remove blank spaces | `df['col1'].str.strip()` |
 | Merge multiple data frames | `pd.merge(df1, df2, on='name_of_common_column', how='outer'` (options for `how=` include left, right and inner)` |
 | Concatenate multiple data frames | ```python pd.concat([df1, df2])``` |
-
-Other functions not covered in the 'How to' guides but that you might find useful to investigate:
-
-| Purpose | Code |
-| :----- | :----- |
 | Splitting data into groups; applying functions to groups; and combining results into a data structure | `df.groupby('column1').sum()`, `df2 = df.groupby(['col1','col2']).count()` |
