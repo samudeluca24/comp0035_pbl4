@@ -7,7 +7,7 @@
 It is assumed you have already completed the "How to prepare a data set using pandas" activity in week 3 on Moodle. That
 activity introduces pandas, dataframes and the dataframe methods used in this session.
 
-The [pandas cheat sheet](pandas_cheat_sheet.md) in this repository lists the methods used in the 'how to' guide.
+The [pandas cheat sheet](pandas_cheat_sheet.md) in this repository lists methods from the 'how to..' guides that would be useful for this PBL session.
 
 ### Set-up
 
