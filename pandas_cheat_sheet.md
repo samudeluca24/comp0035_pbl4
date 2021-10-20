@@ -4,9 +4,9 @@
 | :----- | :----- |
 | Use pandas in a code file | `import pandas as pd` |
 | Read CSV | `df = pd.read_csv('my_data_file.csv')`  |
-| Write to CSV | `df = pd.to_csv('my_new_data_file.csv')` |
+| Write to CSV | `df.to_csv('my_new_data_file.csv')` |
 | Read Excel | `df = pd.read_excel('my_data_file.xlsx', 'sheet1')`  |
-| Write to Excel | `df = pd.to_excel('my_new_data_file', sheet_name='sheet1')` |
+| Write to Excel | `df.to_excel('my_new_data_file', sheet_name='sheet1')` |
 | Skip n rows on read | `df = pd.read_csv('my_data_file.csv', skiprows=1)` | 
 | Number of rows/cols | `df.shape` |
 | Top n rows | `df.head(5)` |
@@ -29,5 +29,6 @@
 | Drop duplicates | `df.drop_duplicates(inplace=True)`, `df.drop_duplicates(subset=['col2'], inplace=True)`, `df.drop_duplicates(subset=['col2'], keep='last', inplace=True)` |
 | Remove blank spaces | `df['col1'].str.strip()` |
 | Merge multiple data frames | `pd.merge(df1, df2, on='name_of_common_column', how='outer'` (options for `how=` include left, right and inner)` |
-| Concatenate multiple data frames | ```python pd.concat([df1, df2])``` |
-| Splitting data into groups; applying functions to groups; and combining results into a data structure | `df.groupby('column1').sum()`, `df2 = df.groupby(['col1','col2']).count()` |
+| Concatenate multiple data frames | `pd.concat([df1, df2])` |
+| (Not in how to's but likely useful) Splitting data into groups; applying functions to groups; and combining results into a data structure | `df.groupby('column1').sum()`, `df2 = df.groupby(['col1','col2']).count()` |
+| Convert string to date | `df['ColumnName'] = pd.to_datetime(df['ColumnName'], format='%d%m%Y'` specify your [date format](https://docs.python.org/3/library/datetime.html#strftime-and-strptime-format-codes) |
