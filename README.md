@@ -20,7 +20,7 @@ You can do this in a number of ways e.g.
   be `df.shape` and not `print(df.shape)`.
 - Create a new python project by creating a copy of the GitHub classroom assignment] as follows:
 
-1. Accept the [GitHub classroom assignment](https://classroom.github.com/a/tCMpWiZx) to create a new repo
+1. Accept the [GitHub classroom assignment](https://classroom.github.com/a/0BkaE0Hn) to create a new repo
 2. Copy the URL of the newly created repo
 3. Create a project in your Python coding environment (e.g. PyCharm, VS Code, Atom, PythonAnywhere etc) by cloning from
    the URL
