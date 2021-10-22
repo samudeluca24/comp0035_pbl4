@@ -32,3 +32,5 @@
 | Concatenate multiple data frames | `pd.concat([df1, df2])` |
 | (Not in how to's but likely useful) Splitting data into groups; applying functions to groups; and combining results into a data structure | `df.groupby('column1').sum()`, `df2 = df.groupby(['col1','col2']).count()` |
 | Convert string to date | `df['ColumnName'] = pd.to_datetime(df['ColumnName'], format='%d%m%Y'` specify your [date format](https://docs.python.org/3/library/datetime.html#strftime-and-strptime-format-codes) |
+| Boxplot with each variable in a subplot | `import matplotlib.pyplot as plt` `bp = df.plot.box(subplots=True)` `plt.show()` |
+| Save plot (example using boxplot) | `df.boxplot(column=['Duration']).get_figure().savefig('images/bp_duration.png')` |

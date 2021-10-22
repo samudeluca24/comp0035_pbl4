@@ -70,7 +70,7 @@ the year and the country code so we can later more easily associate the data wit
 
 ## Problem 1: Open a data set from .csv file in a pandas data frame
 
-1. Create a new python code file
+1. Create a new python code file (or open `pbl4_problem1.py`)
 2. Add a line to import pandas as pd
 3. Add a line of code to create a dataframe by reading the file from csv (see URL below if you don't have a dataset in
    your repo)
@@ -108,7 +108,7 @@ Hint: `inplace=True` replaces the current dataframe contents.
 ## Problem 4: Identify and address any missing values
 
 1. Find and count the number of missing values e.g., Null `isnull().sum().sum()` or NaN `isna().sum().sum()`
-2. Create a dataframe with the rows that contain missing values and print it
+2. Create a dataframe with the rows that contain missing values `missing_rows = df[df.isna().any(axis=1)]` and print it 
 3. Decide what to do with the missing data (delete the row/columm, or replace nulls with a computed or other value)
     - If using the paralympics data you might decide to drop the row that doesn't have info on the male and female
       participants as it would be incorrect to guess or compute this, however the missing 'Type' data could be inferred
