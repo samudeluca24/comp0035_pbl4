@@ -7,7 +7,8 @@
 It is assumed you have already completed the "How to prepare a data set using pandas" activity in week 3 on Moodle. That
 activity introduces pandas, dataframes and the dataframe methods used in this session.
 
-The [pandas cheat sheet](pandas_cheat_sheet.md) in this repository lists methods from the 'how to..' guides that would be useful for this PBL session.
+The [pandas cheat sheet](pandas_cheat_sheet.md) in this repository lists methods from the 'how to..' guides that would
+be useful for this PBL session.
 
 ### Set-up
 
@@ -108,7 +109,7 @@ Hint: `inplace=True` replaces the current dataframe contents.
 ## Problem 4: Identify and address any missing values
 
 1. Find and count the number of missing values e.g., Null `isnull().sum().sum()` or NaN `isna().sum().sum()`
-2. Create a dataframe with the rows that contain missing values `missing_rows = df[df.isna().any(axis=1)]` and print it 
+2. Create a dataframe with the rows that contain missing values `missing_rows = df[df.isna().any(axis=1)]` and print it
 3. Decide what to do with the missing data (delete the row/columm, or replace nulls with a computed or other value)
     - If using the paralympics data you might decide to drop the row that doesn't have info on the male and female
       participants as it would be incorrect to guess or compute this, however the missing 'Type' data could be inferred
@@ -187,7 +188,7 @@ Try to solve the problem:
 
 ## Challenge
 
-The solution to this will be covered in the next PBL. 
+The solution to this will be covered in the next PBL.
 
 We still have a further step to carry out before we explore the data, however we will cover this in the next PBL. If you
 want to try it yourself before then the issue is that the start and end date columns are text format and the date
@@ -195,9 +196,9 @@ doesn't include the year. Year is a separate field. You need to combine the dd-m
 start and end columns. Once you have the two columns as dates, then add a new column called duration and calulate the
 days between the start and end dates.
 
-The functions you will need are covered in the 'How to ... data
-exploration' guide rather than the 'How to... data preparation' guide. This was split for teaching activity convenience
-only, there is no clearly defined split between preparation and exploration activities.
+The functions you will need are covered in the 'How to ... data exploration' guide rather than the 'How to... data
+preparation' guide. This was split for teaching activity convenience only, there is no clearly defined split between
+preparation and exploration activities.
 
 ## Further practice
 
@@ -206,5 +207,10 @@ There are other data sets in the repository that you could try to prepare for a 
 1. Prepare the [assembly-london-2012-ticket-sales.xlsx](data/assembly-london-2012-ticket-sales.xls) data such that you
    could use it to later recreate the cycling chart shown on page 14 of the report
    titled [The Price of Gold: Lessons from the London 2012 ticket sales](https://www.london.gov.uk/sites/default/files/gla_migrate_files_destination/Economy%20Committee%20-%20The%20Price%20of%20Gold.pdf)
-2. Prepare the [paralympic medal tables data set](data/paralympic_medal_tables.xlsx) to show how a particular country's 
+2. Prepare the [paralympic medal tables data set](data/paralympic_medal_tables.xlsx) to show how a particular country's
    (pick any) medal performance has changed over the years.
+
+There is a nice example on Kaggle with a more extensive Olympics data
+set ([Exploring 120 years of Olympic history](https://www.kaggle.com/snocco/exploring-120-years-of-olympics-history/notebook))
+where the author, Stefano Nocco, walks through the preparation activities. If you want to access it you will need to
+create a Kaggle account so please be sure that you are happy with their terms and conditions before you proceed. 
