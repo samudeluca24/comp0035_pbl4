@@ -79,7 +79,7 @@ the year and the country code so we can later more easily associate the data wit
       column names from the first row by default. If you are using your own data set in .xlsx format then refer
       to [pandas.read_excel](https://pandas.pydata.org/docs/reference/api/pandas.read_excel.html)
     - If you didn't clone the classroom repo then you can still access the data file from GitHub using the URL
-      `https://raw.githubusercontent.com/nicholsons/comp0035_pbl4/master/data/paralympics_raw.csv?token=AHBUVRXMMNPI7VSWY4P34IDBO2TES`
+      `https://raw.githubusercontent.com/ucl-comp0035/comp0035_pbl4/master/data/paralympics_raw.csv?token=AHBUVRXLSGRV2Y2PEAXQXVTBPJFD2`
 
 4. Print the dataframe
     - If you are using the PBL dataset you might find it useful to set dataframe options to display the all columns and
