@@ -77,7 +77,7 @@ the year and the country code, so we can later more easily associate the data wi
 
 ## Problem 1: Open a data set from .csv file in a pandas data frame
 
-1. Create a new python code file (or open `pbl4_problem1.py`)
+1. Create a new python code file (or open `problem1.py`)
 2. Add a line to `import pandas as pd`
 3. Add a line of code to create a dataframe by reading the file from csv (see URL below if you don't have a dataset in
    your repo)

@@ -6,7 +6,7 @@ You will need a coding environment that has Python and the pandas, matplotlib an
 
 You can do this in a number of ways. For example:
 
-1. Sign in to GitHub and go to <https://github.com/nicholsons/comp0035_pbl4.git> 
+1. Sign in to GitHub and go to <https://github.com/ucl-comp0035/comp0035_pbl4> 
 2. Select 'Use this template' which will create a copy of the repository in your account
 3. In your IDE, create a new python project by creating a clone of the repository you just created in your account
 4. Create and activate a new virtual environment (or activate an existing environment) in the project
