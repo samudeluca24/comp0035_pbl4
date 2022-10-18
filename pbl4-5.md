@@ -100,7 +100,8 @@ the year and the country code, so we can later more easily associate the data wi
 
 1. Print the number of rows and columns in the DataFrame
 2. Print the first _n_ rows of data (e.g. 5)
-3. Print the column labels and data types. Note any columns that you don't think are needed.
+3. Print the column labels. Note any columns that you don't think are needed.
+4. Print the column labels and data types. 
 
 ## Problem 3: Delete any unnecessary columns
 
