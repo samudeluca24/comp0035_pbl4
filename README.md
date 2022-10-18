@@ -1,4 +1,4 @@
-# COMP0035 PBL 4 and 5: Data preparation and exploration
+# COMP0035 PBL 4 and 5: Data preparation and understanding
 
 ## Data
 
