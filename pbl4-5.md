@@ -15,7 +15,7 @@
 - [Problem 9: Explore how the numbers of male and female participants has changed over time](#problem-9-explore-how-the-numbers-of-male-and-female-participants-has-changed-over-time)
 - [Problem 10: Splitting Winter and Summer data](#problem-10-splitting-winter-and-summer-data)
 - [Problem 11: Exploring the relationship between m and f in winter and summer](#problem-11-exploring-the-relationship-between-m-and-f-in-winter-and-summer)
-- [Further practice](#further-practice)
+- [Further practice](#further-information-and-practice)
 
 
 ## Preparation
@@ -243,7 +243,7 @@ df_prepared['Duration'] = df_prepared['End'] - df_prepared['Start']
 print(df_prepared.head(5))
 ```
 
-## Problem 7:  Basic stats
+## Problem 7: Basic stats
 
 [Pandas DataFrame.describe()](https://pandas.pydata.org/docs/reference/api/pandas.DataFrame.describe.html?highlight=pandas%20dataframe%20describe#pandas.DataFrame.describe)
 method provides some descriptive statistics that summarize the central tendency, dispersion and shape of a dataset’s
