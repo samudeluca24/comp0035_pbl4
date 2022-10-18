@@ -11,8 +11,3 @@ The data has been modified such that it can be used for a data cleaning activity
 
 You can either use your own dataset for this or [paralympics_raw.csv](data/paralympics_raw.csv) from the directory. If
 using your own then place a copy in the `/data` directory of the project.
-
-There is a nice example on Kaggle with a more extensive Olympics' data
-set ([Exploring 120 years of Olympic history](https://www.kaggle.com/snocco/exploring-120-years-of-olympics-history/notebook))
-where the author, Stefano Nocco, walks through the preparation activities. If you want to access it you will need to
-create a Kaggle account so please be sure that you are happy with their terms and conditions before you proceed. 
