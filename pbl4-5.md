@@ -109,7 +109,7 @@ Given the summary of the visualisations and web app in the introduction it seems
 Events, Sports and Countries.
 
 1. Drop the list of named columns `['Events', 'Sports', 'Countries']`
-2. Print the column labels and data types again, or check the shape which should be lower than the original column count
+2. Print the column labels again, or check the shape which should be lower than the original column count
 
 Hint: `inplace=True` replaces the current dataframe contents.
 
