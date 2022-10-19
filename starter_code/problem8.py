@@ -1,7 +1,10 @@
-import matplotlib.pyplot as plt
+from pathlib import Path
+
 import pandas as pd
 
 
 if __name__ == '__main__':
-    df = pd.read_csv('data/paralympics_prepared.csv', parse_dates=['Start', 'End'], dtype={'Year': str})
-    # Add code here to create the box plot
+    prepared_csv_filepath = Path(__file__).parent.parent.joinpath('data', 'paralympics_prepared.csv')
+    df_prepared = pd.read_csv(prepared_csv_filepath)
+
+    # Add code here to print the stats returned by describe
