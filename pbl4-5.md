@@ -100,7 +100,8 @@ the year and the country code, so we can later more easily associate the data wi
 
 1. Print the number of rows and columns in the DataFrame
 2. Print the first _n_ rows of data (e.g. 5)
-3. Print the column labels and data types. Note any columns that you don't think are needed.
+3. Print the column labels. Note any columns that you don't think are needed.
+4. Print the column labels and data types. 
 
 ## Problem 3: Delete any unnecessary columns
 
@@ -108,7 +109,7 @@ Given the summary of the visualisations and web app in the introduction it seems
 Events, Sports and Countries.
 
 1. Drop the list of named columns `['Events', 'Sports', 'Countries']`
-2. Print the column labels and data types again, or check the shape which should be lower than the original column count
+2. Print the column labels again, or check the shape which should be lower than the original column count
 
 Hint: `inplace=True` replaces the current dataframe contents.
 
