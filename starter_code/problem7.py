@@ -51,13 +51,11 @@ def prepare_data():
     # There will be more than one way to do this, the following uses a mask (condition).
     df_merged = df_merged['NOC'].mask(df_merged['Country'] == 'Great Britain', 'GBR')
     df_merged = df_merged['NOC'].mask(df_merged['Country'] == 'Republic of Korea', 'KOR')
-    prepared_csv_filepath = Path(__file__).parent.parent.joinpath('data', 'paralympics_prepared.csv')
-    df_merged.to_csv(prepared_csv_filepath, index=False)
+    return df_merged
 
 
 if __name__ == '__main__':
-    prepared_csv_filepath = Path(__file__).parent.parent.joinpath('data', 'paralympics_prepared.csv')
-    df_prepared = pd.read_csv(prepared_csv_filepath)
+    df_raw = prepare_data()
 
     # Check the data type of the columns
 

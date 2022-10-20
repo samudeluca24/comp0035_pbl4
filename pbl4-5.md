@@ -9,20 +9,20 @@
 - [Problem 4: Identify and address any missing values](#problem-4-identify-and-address-any-missing-values)
 - [Problem 5: Find the unique values for categorical data](#problem-5-find-the-unique-values-for-categorical-data)
 - [Problem 6: Merge the data with another data set to add the country codes](#problem-6-merge-the-data-with-another-data-set-to-add-the-country-codes)
-- [Challenge](#challenge)
-- [Problem 7: Basic stats](#problem-7-basic-stats)
-- [Problem 8: Identify outliers](#problem-8-identify-outliers)
-- [Problem 9: Explore how the numbers of male and female participants has changed over time](#problem-9-explore-how-the-numbers-of-male-and-female-participants-has-changed-over-time)
-- [Problem 10: Splitting Winter and Summer data](#problem-10-splitting-winter-and-summer-data)
-- [Problem 11: Exploring the relationship between m and f in winter and summer](#problem-11-exploring-the-relationship-between-m-and-f-in-winter-and-summer)
+- [Problem 7: ](#challenge)
+- [Problem 8: Basic stats](#problem-7-basic-stats)
+- [Problem 9: Identify outliers](#problem-8-identify-outliers)
+- [Problem 10: Explore how the numbers of male and female participants has changed over time](#problem-9-explore-how-the-numbers-of-male-and-female-participants-has-changed-over-time)
+- [Problem 11: Splitting Winter and Summer data](#problem-10-splitting-winter-and-summer-data)
+- [Problem 12: Exploring the relationship between m and f in winter and summer](#problem-11-exploring-the-relationship-between-m-and-f-in-winter-and-summer)
 - [Further practice](#further-information-and-practice)
-
 
 ## Preparation
 
 ### Pre-requisite knowledge
 
-It is assumed you attended the lectures that introduced pandas, dataframes and the dataframe methods used in this session.
+It is assumed you attended the lectures that introduced pandas, dataframes and the dataframe methods used in this
+session.
 
 ### Set-up
 
@@ -30,7 +30,7 @@ For this session you will need a coding environment that has Python and the pand
 
 You can do this in a number of ways. For example:
 
-1. Sign in to GitHub and go to <https://github.com/nicholsons/comp0035_pbl4.git> 
+1. Sign in to GitHub and go to <https://github.com/ucl-comp0035/comp0035_pbl4.git>
 2. Select 'Use this template' which will create a copy of the repository in your account
 3. In your IDE, create a new python project by creating a clone of the repository you just created in your account
 4. Create and activate a new virtual environment (or activate an existing environment) in the project
@@ -98,31 +98,37 @@ the year and the country code, so we can later more easily associate the data wi
 
 ## Problem 2: Display some basic information about the data frame
 
-1. Print the number of rows and columns in the DataFrame
-2. Print the first _n_ rows of data (e.g. 5)
-3. Print the column labels. Note any columns that you don't think are needed.
-4. Print the column labels and data types. 
+Use pandas.DataFrame functions to:
+
+1. Print the number of rows and columns in the
+   DataFrame ([shape](https://pandas.pydata.org/pandas-docs/version/0.23/generated/pandas.DataFrame.shape.html))
+2. Print the first _n_ rows of data ([head](https://pandas.pydata.org/docs/reference/api/pandas.DataFrame.head.html))
+3. Print the column labels. Note any columns that you don't think are
+   needed. ([columns](https://pandas.pydata.org/docs/reference/api/pandas.DataFrame.columns.html))
+4. Print the column labels and data
+   types. ([info](https://pandas.pydata.org/docs/reference/api/pandas.DataFrame.info.html)
+   or [dtypes](https://pandas.pydata.org/docs/reference/api/pandas.DataFrame.dtypes.html))
 
 ## Problem 3: Delete any unnecessary columns
 
-Given the summary of the visualisations and web app in the introduction it seems you could delete the columns for
-Events, Sports and Countries.
+Given the summary in the introduction; you don't need the columns for Events, Sports and Countries.
 
-1. Drop the list of named columns `['Events', 'Sports', 'Countries']`
+1. Drop the list of named
+   columns `['Events', 'Sports', 'Countries']` ([drop](https://pandas.pydata.org/docs/reference/api/pandas.DataFrame.drop.html?highlight=drop#pandas.DataFrame.drop)
+   and use `inplace=True` or reassign to a variable)
 2. Print the column labels again, or check the shape which should be lower than the original column count
-
-Hint: `inplace=True` replaces the current dataframe contents.
 
 ## Problem 4: Identify and address any missing values
 
 1. Find and count the number of missing values e.g., Null `isnull().sum().sum()` or NaN `isna().sum().sum()`
 2. Create a dataframe with the rows that contain missing values `missing_rows = df[df.isna().any(axis=1)]` and print it
 3. Decide what to do with the missing data (delete the row/column, or replace nulls with a computed or other value)
-    - If using the paralympics data you might decide to drop the row that doesn't have info on the male and female
-      participants as it would be incorrect to guess or compute this, however the missing 'Type' data could be inferred
-      from the dates since the years correspond to 'Winter' events.
-    - Drop the row with missing Participants (M) and Participants (F) using `dropna()`
-    - For the Type column, fill the NaNs with 'Winter' using `fillna()`
+    - If using the paralympics data you might decide to:
+        1. drop the row that doesn't have info on the male and female participants as it would be incorrect to guess or
+           compute this. For example, you can drop the row with missing Participants (M) and Participants (F)
+           using `dropna()`. See notes below on using `dropna()`.
+        2. The missing 'Type' data could be inferred from the dates since the years correspond to 'Winter' events. For
+           the 'Type' column, fill the NaNs with 'Winter' using `fillna()`
 
 The syntax
 for [dropna](https://pandas.pydata.org/docs/reference/api/pandas.DataFrame.dropna.html?highlight=dropna#pandas.DataFrame.dropna)
@@ -144,11 +150,11 @@ df.dropna(axis=0, subset=['AColName', 'AnotherColName'], inplace=True)
 ## Problem 5: Find the unique values for categorical data
 
 Checking the unique values for categorical data could help to identify if there are any inconsistent entries. The only
-categorical column that we have is Type so try to identify the unique values for this column.
+categorical column that we have is `Type` so try to identify the unique values for this column.
 
-Use `df['ColName'].unique()`.
+Use [`df['ColName'].unique()`](https://pandas.pydata.org/docs/reference/api/pandas.Series.unique.html).
 
-Deal with any inconsistent values.
+Address (fix) any inconsistent values. For example, whitespace can be removed using the 
 
 ## Problem 6: Merge the data with another data set to add the country codes
 
@@ -193,58 +199,41 @@ Try to solve the problem:
   used [mask](https://pandas.pydata.org/docs/reference/api/pandas.DataFrame.mask.html?highlight=mask#pandas.DataFrame.mask)
   .
 
-## Challenge
+## Problem 7: Compute new data
 
-The solution to this will be covered in the next PBL.
+The start and end date columns are text format and the date doesn't include the year. Year is a separate field.
 
-We still have a further step to carry out before we explore the data, however we will cover this in the next PBL. If you
-want to try it yourself before then the issue is that the start and end date columns are text format and the date
-doesn't include the year. Year is a separate field. You need to combine the dd-mmm and the yyyy to create a date for the
-start and end columns. Once you have the two columns as dates, then add a new column called duration and calculate the
-days between the start and end dates.
+To create a single date column in a format you can work with for charts:
 
-The functions you will need are covered in the 'How to ... data exploration' guide rather than the 'How to... data
-preparation' guide. This was split for teaching activity convenience only, there is no clearly defined split between
-preparation and exploration activities.
+- combine the dd-mmm and the yyyy to create a date for the start and end columns
+- add a new column called duration with values calculated as the difference in days between the start and end dates
 
-## Challenge solution
-
-The start and end date columns are text format, and the date doesn't include the year. Year is a separate field. You
-need to combine 'dd-mmm' and 'yyyy' to create a date for the start and end columns. Once you have the two columns as
-dates, then add a new column called duration and calculate the days between the start and end dates.
-
-The following solution is in `pbl4_challenge_solved.py`.
+One way to do this is as follows, you may work out a more efficient way to do this!
 
 ```python
-# A possible solution to the challenge, please share if you have a neater or more efficient solution!
-
 # Check the data type of the columns
-print(df_prepared[['Year', 'Start', 'End']].dtypes)
+print(df[['Year', 'Start', 'End']].dtypes)
 
 # Check the format of the strings in Start and End by printing a couple of rows
-print(df_prepared[['Year', 'Start', 'End']].head(2))
+print(df[['Year', 'Start', 'End']].head(2))
 
 # Add the year to the Start and End columns. Year is int and Start/End are strings so to combine as strings you
 # need to first convert the Year to string
 # TODO: Consider if there is a case where the dates span year end e.g. December to January)
-df_prepared["Start"] = + df_prepared["Start"] + '-' + df_prepared["Year"].astype(str)
-df_prepared["End"] = + df_prepared["End"] + '-' + df_prepared["Year"].astype(str)
-print(df_prepared[['Year', 'Start', 'End']].head(2))
-print(df_prepared[['Year', 'Start', 'End']].dtypes)
+df["Start"] = + df["Start"] + '-' + df["Year"].astype(str)
+# Do the same for the End
 
 # Change the column datatype to date-time format
 # Pandas to_datetime handles most date formats so you can run the following without the format= and it will work
-df_prepared['Start'] = pd.to_datetime(df_prepared['Start'], format='%d-%b-%Y')
-df_prepared['End'] = pd.to_datetime(df_prepared['End'])
-print(df_prepared[['Year', 'Start', 'End']].head(2))
-print(df_prepared[['Year', 'Start', 'End']].dtypes)
+df['Start'] = pd.to_datetime(df['Start'], format='%d-%b-%Y')
+# Repeat for the End
 
 # Create a duration column that calculates days between the start and end
-df_prepared['Duration'] = df_prepared['End'] - df_prepared['Start']
-print(df_prepared.head(5))
+df['Duration'] =  # Add code here!
+
 ```
 
-## Problem 7: Basic stats
+## Problem 8: Basic stats
 
 [Pandas DataFrame.describe()](https://pandas.pydata.org/docs/reference/api/pandas.DataFrame.describe.html?highlight=pandas%20dataframe%20describe#pandas.DataFrame.describe)
 method provides some descriptive statistics that summarize the central tendency, dispersion and shape of a dataset’s
@@ -284,7 +273,7 @@ if __name__ == '__main__':
 For the coursework you should consider describing the data, however you do not need to analyse or interpret the
 resulting stats since interpreting statistics is not part of this course.
 
-## Problem 8: Identify outliers
+## Problem 9: Identify outliers
 
 Identifying outliers is subjective and techniques include:
 
@@ -351,7 +340,7 @@ span both events. You could either choose to ignore the data, or you could perha
 split this into two entries. We don't have the details currently to do the latter so if we created charts using the
 duration field we may want to remove this outlier.
 
-## Problem 9: Explore how the numbers of male and female participants has changed over time
+## Problem 10: Explore how the numbers of male and female participants has changed over time
 
 Let's have a look at some of our data to start to understand it in more detail.
 
@@ -375,7 +364,7 @@ if __name__ == '__main__':
 
 ```
 
-## Problem 10: Splitting Winter and Summer data
+## Problem 11: Splitting Winter and Summer data
 
 You will have noticed the line in the solution to problem 3 looks like a zigzag. We are plotting winter and summer
 participants on the same axis and the numbers for winter are always lower.
@@ -410,7 +399,7 @@ plt.xticks(rotation=90)
 So it looks like we would have data to answer the question "How has the number of male and female competitors in the
 paralympics changed over time?".
 
-## Problem 11: Exploring the relationship between m and f in winter and summer
+## Problem 12: Exploring the relationship between m and f in winter and summer
 
 It may be arguable whether this is beyond the exploration stage however let's have a go at seeing whether there is data
 to support the second question.
