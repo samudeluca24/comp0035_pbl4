@@ -88,8 +88,8 @@ the year and the country code, so we can later more easily associate the data wi
       `https://raw.githubusercontent.com/ucl-comp0035/comp0035_pbl4/master/data/paralympics_raw.csv?token=AHBUVRXLSGRV2Y2PEAXQXVTBPJFD2`
 
 4. Print the dataframe
-    - If you are using the PBL dataset you might find it useful to set dataframe options to display the all columns and
-      rows for using
+    - If you are using the PBL dataset you might find it useful to set pandas options to display the all columns and
+      rows for the dataframe when you print them using:
 
         ```python
         pd.set_option('display.max_rows', df.shape[0] + 1)
