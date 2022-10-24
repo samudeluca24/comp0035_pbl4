@@ -9,12 +9,12 @@
 - [Problem 4: Identify and address any missing values](#problem-4-identify-and-address-any-missing-values)
 - [Problem 5: Find the unique values for categorical data](#problem-5-find-the-unique-values-for-categorical-data)
 - [Problem 6: Merge the data with another data set to add the country codes](#problem-6-merge-the-data-with-another-data-set-to-add-the-country-codes)
-- [Problem 7: ](#challenge)
-- [Problem 8: Basic stats](#problem-7-basic-stats)
-- [Problem 9: Identify outliers](#problem-8-identify-outliers)
-- [Problem 10: Explore how the numbers of male and female participants has changed over time](#problem-9-explore-how-the-numbers-of-male-and-female-participants-has-changed-over-time)
-- [Problem 11: Splitting Winter and Summer data](#problem-10-splitting-winter-and-summer-data)
-- [Problem 12: Exploring the relationship between m and f in winter and summer](#problem-11-exploring-the-relationship-between-m-and-f-in-winter-and-summer)
+- [Problem 7: Compute new data ](#problem-7-compute-new-data)
+- [Problem 8: Basic stats](#problem-8-basic-stats)
+- [Problem 9: Identify outliers](#problem-9-identify-outliers)
+- [Problem 10: Explore how the numbers of male and female participants has changed over time](#problem-10-explore-how-the-numbers-of-male-and-female-participants-has-changed-over-time)
+- [Problem 11: Splitting Winter and Summer data](#problem-11-splitting-winter-and-summer-data)
+- [Problem 12: Exploring the relationship between m and f in winter and summer](#problem-12-exploring-the-relationship-between-m-and-f-in-winter-and-summer)
 - [Further practice](#further-information-and-practice)
 
 ## Preparation
